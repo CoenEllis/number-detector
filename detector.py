@@ -59,9 +59,9 @@ class Detector:
                 minimum = guess
             else:
                 maximum = guess
-        return guess
+        return tries, guess
 
 if __name__ == "__main__":
     detector = Detector()
-    precise_number = detector.detect('-1234567890.0987654321')
+    precise_number = detector.detect(input("Target number: "))
     print(precise_number)
